@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+	<bean id="question" class="com.capgemini.app2.Question">
+
+		<property name="questionId" value="1" />
+		<property name="question" value="What are the scopes of spring bean?" />
+		<property name="answer">
+			<list>
+				<ref bean="answer1" />
+				<ref bean="answer2" />
+				<ref bean="answer3" />
+				<ref bean="answer4" />
+				<ref bean="answer5" />
+			</list>
+
+		</property>
+	</bean>
+	<bean id="answer1" class="com.capgemini.app2.Answer">
+		<property name="answers" value="singleton" />
+	</bean>
+	<bean id="answer2" class="com.capgemini.app2.Answer">
+		<property name="answers" value="prototype" />
+	</bean>
+	<bean id="answer3" class="com.capgemini.app2.Answer">
+		<property name="answers" value="request" />
+	</bean>
+	<bean id="answer4" class="com.capgemini.app2.Answer">
+		<property name="answers" value="session" />
+	</bean>
+	<bean id="answer5" class="com.capgemini.app2.Answer">
+		<property name="answers" value="globle-session" />
+	</bean>
+
+</beans>
